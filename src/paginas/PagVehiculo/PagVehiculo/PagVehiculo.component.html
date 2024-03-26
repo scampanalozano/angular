@@ -1,0 +1,35 @@
+
+<div class="card">
+  <div class="card-header text-white bg-info mb-3">
+    <div class="card-title">
+    <h3> {{'Detalle del Vehiculo'+':'+ vehiculo?.marca }}</h3> 
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <ul>
+            <li><b>Código:&nbsp;&nbsp;</b>{{vehiculo?.codigo}}</li>
+            <li><b>Marca:&nbsp;&nbsp;</b>{{vehiculo?.marca}}</li>
+            <li><b>Modelo:&nbsp;&nbsp;</b>{{vehiculo?.modelo}}</li>
+            <li><b>Año:&nbsp;&nbsp;</b>{{vehiculo?.anio}}</li>
+            <li><b>Kilometraje:&nbsp;&nbsp;</b>{{vehiculo?.kilometraje}}</li>
+            <li><b>Precio:&nbsp;&nbsp;</b>{{vehiculo?.precio}}</li>
+            <li><b>Calificacion:&nbsp;&nbsp;</b>{{vehiculo?.calificacion}}</li>
+          </ul>
+        </div>
+        <div class="col">
+          <li><img [src]="vehiculo?.foto" style="width: 450px"/></li>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-footer">
+         
+      <a class="btn btn-secondary btn-sm" [routerLink]="['/vehiculos']">Atras</a>
+    </div>
+  </div>
+
+
+</div>

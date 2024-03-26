@@ -1,0 +1,87 @@
+<div class="card">
+  <div class="card-header">
+    <div class="card-title">
+      <h5>Lista de Vehiculos</h5>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Filtro:</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Marca/Placa/Nombre" [(ngModel)]="filtro" (blur)="consultarVehiculos()">
+      </div>
+    </div>
+    <a class="btn btn-success btn-xs" [routerLink]="['/vehiculo']" style="margin-block-end: 8px;">Nuevo Vehículo</a>
+    <div class="row">
+      <div class="col-sm-12">
+        <table class="table table-dark">
+          <thead>
+            <tr>
+              <td colspan="8">
+
+              </td>
+              <td>
+                <div class="row">
+                  <div class="col">
+                    <select class="form-control" [(ngModel)]="rows" (change)="consultarVehiculos()">
+                      <option value="5">5</option>
+                      <option value="10">10</option>
+                      <option value="25">25</option>
+                      <option value="100">100</option>
+                    </select>
+                  </div>
+
+                </div>
+                
+
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <button class="btn btn-success btn-xs"
+                  [ngClass]="{'btn-success': mostrarImagen,'btn-warning':!mostrarImagen }" (click)="mostrar()"
+                  [innerText]="mostrarImagen ? 'Mostrar Imagen': 'Ocultar Imagen'"></button>
+
+              </th>
+              <th>Código</th>
+              <th>Marca</th>
+              <th>Modelo</th>
+              <th>Año</th>
+              <th>Kilometraje</th>
+              <th>Precio</th>
+              <th>Calificación</th>
+              <th></th>
+
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of listaVehiculos ">
+              <td><img [src]="item.foto" style="width: 50px" *ngIf="this.mostrarImagen" /></td>
+              <td><a [routerLink]="['/vehiculos/'+ item.codigo]">{{item.codigo}}</a></td>
+              <td>{{item.marca}}</td>
+              <td>{{item.modelo | lowercase | AEspacio: '-'}}</td>
+              <td [innerText]="item.anio"></td>
+              <td>{{item.kilometraje}}</td>
+              <td>{{item.precio | currency }}</td>
+              <td>
+                <app-Calificacion [calificacion]="item.calificacion" (accion)="recepcion($event)"></app-Calificacion>
+
+              </td>
+              <td>
+                <a class="btn btn-success btn-xs" [routerLink]="['/vehiculo/'+item.codigo]">Editar</a>
+                <button class="btn btn-primary btn-sm" style="margin: 10px;"
+                  (click)="eliminar(item.codigo)">Eliminar</button>
+              </td>
+
+
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+
+    </div>
+
+
+  </div>
+</div>

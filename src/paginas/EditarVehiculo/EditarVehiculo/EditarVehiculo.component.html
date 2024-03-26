@@ -1,0 +1,70 @@
+
+
+<div class="card">
+  <div class="card-header text-white bg-info mb-3">
+    <div class="card-title">
+      Editar Vehiculo
+    </div>
+  </div>
+  <div class="card-body">
+    <form [formGroup]="formulario">
+      <div class="row">
+        <div clas="col-12">
+          <div class="mb-3">
+            <label for="formGroupExampleInput">Código</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" formControlName="codigo" />
+            <span *ngIf="formulario.controls['codigo'].errors?.required" class="text-danger">Valor Requerido</span><br>
+            <span *ngIf="formulario.controls['codigo'].errors?.codigoValidate" class="text-danger">Solo acepta letras mayusculas y</span>
+          </div>
+          <div class="mb-3">
+            <label for="formGroupExampleInput">Marca</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" formControlName="marca" />
+
+          </div>
+          <div class="mb-3">
+            <label for="formGroupExampleInput">Modelos</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" formControlName="modelo" />
+
+          </div>
+          <div class="mb-3">
+            <label for="formGroupExampleInput">Año</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" formControlName="anio" />
+
+          </div>
+
+          <div class="mb-3">
+            <label for="formGroupExampleInput">Kilometraje</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" formControlName="kilometraje" />
+
+          </div>
+          <div class="mb-3">
+            <label for="formGroupExampleInput">Precio</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" formControlName="precio" />
+
+          </div>
+          <div class="mb-3">
+            <label for="formGroupExampleInput">Calificacion</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" formControlName="calificacion" />
+
+          </div>
+
+        </div>
+
+
+
+      </div>
+
+      <div>
+        <div>
+          <button class="btn btn-primary btn-sm" style="margin: 10px;" (click)="guardar()">Guardar</button>
+          <a class="btn btn-secondary btn-sm" [routerLink]="['/vehiculos']">Atras</a>
+        </div>
+
+
+
+      </div>
+    </form>
+  </div>
+
+
+</div>
