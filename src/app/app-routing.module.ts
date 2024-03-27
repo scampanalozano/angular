@@ -6,6 +6,8 @@ import { PagNotFoundComponent } from '../paginas/PagNotFound/PagNotFound/PagNotF
 import { PagVehiculoComponent } from '../paginas/PagVehiculo/PagVehiculo/PagVehiculo.component';
 import { PagVehiculosRegistroComponent } from '../paginas/PagVehiculosRegistro/PagVehiculosRegistro/PagVehiculosRegistro.component';
 import { EditarVehiculoComponent } from '../paginas/EditarVehiculo/EditarVehiculo/EditarVehiculo.component';
+import { PagListaClienteComponent } from '../paginas/PagListaCliente/PagListaCliente/PagListaCliente.component';
+import { PagClientesRegistroComponent } from '../paginas/PagClientesRegistro/PagClientesRegistro/PagClientesRegistro.component';
 
 const routes: Routes = [
 {
@@ -17,8 +19,17 @@ const routes: Routes = [
   component: PagListaVehiculosComponent,  
 },
 {
+  path:"clientes",
+  component: PagListaClienteComponent,  
+},
+{
   path:"vehiculo",
   component: PagVehiculosRegistroComponent,
+  pathMatch:'full'
+},
+{
+  path:"cliente",
+  component: PagClientesRegistroComponent,
   pathMatch:'full'
 },
 {

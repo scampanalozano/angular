@@ -8,6 +8,8 @@ import { PagVehiculosRegistroComponent } from "./PagVehiculosRegistro/PagVehicul
 import { RouterModule } from "@angular/router";
 import { PagVehiculoComponent } from "./PagVehiculo/PagVehiculo/PagVehiculo.component";
 import { EditarVehiculoComponent } from "./EditarVehiculo/EditarVehiculo/EditarVehiculo.component";
+import { PagListaClienteComponent } from "./PagListaCliente/PagListaCliente/PagListaCliente.component";
+import { PagClientesRegistroComponent } from "./PagClientesRegistro/PagClientesRegistro/PagClientesRegistro.component";
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import { EditarVehiculoComponent } from "./EditarVehiculo/EditarVehiculo/EditarV
         PagListaVehiculosComponent,
         PagVehiculosRegistroComponent,
         PagVehiculoComponent,
-        EditarVehiculoComponent
+        EditarVehiculoComponent,
+        PagListaClienteComponent,
+        PagClientesRegistroComponent
         
        
         
@@ -36,7 +40,9 @@ import { EditarVehiculoComponent } from "./EditarVehiculo/EditarVehiculo/EditarV
         PagListaVehiculosComponent,
         PagVehiculosRegistroComponent,
         PagVehiculoComponent,
-        EditarVehiculoComponent
+        EditarVehiculoComponent,
+        PagListaClienteComponent, 
+        PagClientesRegistroComponent
        
     ]
 

@@ -1,0 +1,73 @@
+<div class="card">
+  <div class="card-header">
+    <div class="card-title">
+      <h5>Lista de Clientes</h5>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Filtro:</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Codigo/Nombre/Apellido" [(ngModel)]="filtro" (blur)="consultarClientes()">
+      </div>
+    </div>
+    <a class="btn btn-success btn-xs" [routerLink]="['/cliente']" style="margin-block-end: 8px;">Nuevo Cliente</a>
+    <div class="row">
+      <div class="col-sm-12">
+        <table class="table table-dark">
+          <thead>
+            <tr>
+              <td colspan="5">
+
+              </td>
+              <td>
+                <div class="row">
+                  <div class="col">
+                    <select class="form-control" [(ngModel)]="rows" (change)="consultarClientes()">
+                      <option value="5">5</option>
+                      <option value="10">10</option>
+                      <option value="25">25</option>
+                      <option value="100">100</option>
+                    </select>
+                  </div>
+
+                </div>
+                
+
+              </td>
+            </tr>
+            <tr>
+              <th>Nombre</th>
+              <th>Apellido</th>
+              <th>Password</th>
+              <th>Teléfono</th>
+              <th>Email</th>
+              <th></th>
+
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of listaClientes ">
+              <td>{{item.nombre}}</td>
+              <td>{{item.apellido}}</td>
+              <td>{{item.password}}</td>
+              <td>{{item.telefono}}</td>
+              <td>{{item.email}}</td>
+             
+              <td>
+                <a class="btn btn-success btn-xs" [routerLink]="['/cliente'+item.codigo]">Editar</a>
+                <button class="btn btn-primary btn-sm" style="margin: 10px;">Eliminar</button>
+              </td>
+
+
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+
+    </div>
+
+
+  </div>
+</div>

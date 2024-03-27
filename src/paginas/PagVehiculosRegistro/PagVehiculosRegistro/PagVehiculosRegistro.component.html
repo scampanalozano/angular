@@ -13,37 +13,42 @@
             <label for="formGroupExampleInput">Código</label>
             <input type="text" class="form-control" id="formGroupExampleInput" formControlName="codigo" />
             <span *ngIf="formulario.controls['codigo'].errors?.required" class="text-danger">Valor Requerido</span><br>
-            <span *ngIf="formulario.controls['codigo'].errors?.codigoValidate" class="text-danger">Solo acepta letras mayusculas y</span>
+            <span *ngIf="formulario.controls['codigo'].errors?.codigoValidate" class="text-danger">Solo acepta letras mayusculas y numeros (4 digitos)</span>
           </div>
           <div class="mb-3">
             <label for="formGroupExampleInput">Marca</label>
             <input type="text" class="form-control" id="formGroupExampleInput" formControlName="marca" />
-
+            <span *ngIf="formulario.controls['marca'].errors?.required" class="text-danger">Valor Requerido</span>
           </div>
           <div class="mb-3">
             <label for="formGroupExampleInput">Modelos</label>
             <input type="text" class="form-control" id="formGroupExampleInput" formControlName="modelo" />
+            <span *ngIf="formulario.controls['modelo'].errors?.required" class="text-danger">Valor Requerido</span>
 
           </div>
           <div class="mb-3">
             <label for="formGroupExampleInput">Año</label>
             <input type="text" class="form-control" id="formGroupExampleInput" formControlName="anio" />
+            <span *ngIf="formulario.controls['anio'].errors?.required" class="text-danger">Valor Requerido</span>
 
           </div>
 
           <div class="mb-3">
             <label for="formGroupExampleInput">Kilometraje</label>
             <input type="text" class="form-control" id="formGroupExampleInput" formControlName="kilometraje" />
+            <span *ngIf="formulario.controls['kilometraje'].errors?.required" class="text-danger">Valor Requerido</span>
 
           </div>
           <div class="mb-3">
             <label for="formGroupExampleInput">Precio</label>
             <input type="text" class="form-control" id="formGroupExampleInput" formControlName="precio" />
+            <span *ngIf="formulario.controls['precio'].errors?.required" class="text-danger">Valor Requerido</span>
 
           </div>
           <div class="mb-3">
             <label for="formGroupExampleInput">Calificacion</label>
             <input type="text" class="form-control" id="formGroupExampleInput" formControlName="calificacion" />
+            <span *ngIf="formulario.controls['calificacion'].errors?.required" class="text-danger">Valor Requerido</span>
 
           </div>
 

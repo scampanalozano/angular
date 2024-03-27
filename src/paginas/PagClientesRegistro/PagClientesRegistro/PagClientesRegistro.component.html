@@ -1,0 +1,60 @@
+
+<div class="card">
+  <div class="card-header text-white bg-info mb-3">
+    <div class="card-title">
+      Nuevo Cliente
+    </div>
+  </div>
+  <div class="card-body">
+    <form [formGroup]="formulario">
+      <div class="row">
+        <div clas="col-12">
+          <div class="mb-3">
+            <label for="formGroupExampleInput">Nombre</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" formControlName="nombre" />
+            <span *ngIf="formulario.controls['nombre'].errors?.required" class="text-danger">Valor Requerido</span><br>
+
+          </div>
+          <div class="mb-3">
+            <label for="formGroupExampleInput">Apellido</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" formControlName="apellido" />
+            <span *ngIf="formulario.controls['apellido'].errors?.required" class="text-danger">Valor Requerido</span><br>
+
+          </div>
+          <div class="mb-3">
+            <label for="formGroupExampleInput">Password</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" formControlName="password" />
+
+          </div>
+          <div class="mb-3">
+            <label for="formGroupExampleInput">Teléfono</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" formControlName="telefono" />
+
+          </div>
+
+          <div class="mb-3">
+            <label for="formGroupExampleInput">Email</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" formControlName="email" />
+
+          </div>
+          
+        </div>
+
+
+
+      </div>
+
+      <div>
+        <div>
+          <button class="btn btn-primary btn-sm" style="margin: 10px;" (click)="guardar()">Guardar</button>
+          <a class="btn btn-secondary btn-sm" [routerLink]="['/clientes']">Atras</a>
+        </div>
+
+
+
+      </div>
+    </form>
+  </div>
+
+
+</div>
