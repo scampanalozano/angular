@@ -34,7 +34,7 @@ export class ClienteService {
   actualizarVehiculo(cliente: Cliente, codigo: String) {
     return this.http.put<Respuesta>(this.baseUrl + "cliente/" + codigo, cliente, this.httpOptions);
   }
-  eliminarVehiculo(codigo: String) {
+  eliminarCliente(codigo: String) {
     return this.http.delete<Respuesta>(this.baseUrl + "cliente/" + codigo);
   }
 

@@ -31,29 +31,7 @@ export class PagListaClienteComponent implements OnInit {
     })
   }
 
-  eliminar(codigo:String){
-    Swal.fire({
-      title: "¿Estas seguro de eliminar este registro",
-      showCancelButton: true,
-      confirmButtonText: 'Si',
-      cancelButtonText:'No',
-      icon:"question"
-    
-    }).then((res)=>{
-      this.clienteService.eliminarVehiculo(codigo).subscribe(data =>{
-        if(data.codigo == "1"){
-          this.consultarClientes();
-          Swal.fire({
-            title: "Mensaje",
-            text: "Vehiculo eliminado correctamente",
-            icon: "success"
-
-          })
-        }
-      })
-    })
-
-  }
+ 
 
 
 
