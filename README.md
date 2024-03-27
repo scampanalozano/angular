@@ -1,3 +1,6 @@
+Autor: Stefany Antonella Campaña Lozano
+antonellacampana6@gmail.com
+
 # AutoVenta2
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.1.
